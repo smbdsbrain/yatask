@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <Spinner
+                android:id="@+id/spinner_from_tr"
+                android:layout_width="match_parent"
+                android:entries="@array/lang_list"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_compare_arrows_24dp"
+                android:id="@+id/switch_lang"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_to_tr"
+                android:layout_weight="1"
+                android:entries="@array/lang_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/phrase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="20"
+            android:hint="@string/translate_edit_text_hint"
+            android:inputType="textMultiLine" />
+
+
+        <!--
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="20"
+            android:text="" /> -->
+
+        <ListView
+            android:id="@+id/translations_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
